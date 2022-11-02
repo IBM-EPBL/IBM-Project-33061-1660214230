@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Images in HTML</title>
+       
+        <div id="head1"><hr><h2>IBM#3 - Object Storage</h2><hr></div>
+
+        <link rel="stylesheet" href="https://jobportalibm.s3.jp-tok.cloud-object-storage.appdomain.cloud/img.css">
+    </head>
+    <body>
+        
+        <div id="pics">
+           <div id="i1"><img src="https://jobportal8.s3.us-south.cloud-object-storage.appdomain.cloud/im-1.jpg" width="250px" height="200px"></div><br><br>
+           <div id="i2">  <img src="https://jobportal8.s3.us-south.cloud-object-storage.appdomain.cloud/im-2.jpg" width="250px" height="200px"></div><br><br>
+           <div id="i3"><img src="https://jobportal8.s3.us-south.cloud-object-storage.appdomain.cloud/im-3.jpg" width="250px" height="200px"></div>
+        </div>
+        <div id="images">
+            <div id="i4"><img src="https://jobportal8.s3.us-south.cloud-object-storage.appdomain.cloud/im-4.jpg" width="250px" height="200px"></div><br>
+           <div id="i5"> <img src="https://jobportal8.s3.us-south.cloud-object-storage.appdomain.cloud/im-5.jpg" width="250px" height="200px"></div>
+           
+        </div>
+         
+        <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "ba66b07d-830e-445c-93ac-effdf6967f25", // The ID of this integration.
+    region: "eu-gb", // The region your integration is hosted in.
+    serviceInstanceID: "22149ccb-5a59-41aa-ae14-e52a75680153", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    </body>
+</html>
