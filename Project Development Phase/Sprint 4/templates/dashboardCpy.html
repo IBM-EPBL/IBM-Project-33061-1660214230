@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skill/Job Recommender Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>                      
+      </button>
+      <a class="navbar-brand" href="#">Skill/Job Recommender Application</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <form class="navbar-form navbar-left" action="#">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="{{url_for('display')}}">My Jobs</a></li>
+        <li><a href="/logout">Logout</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="our-focus">
+            <div class="container">
+              <h2 class="text-center mt-3">Available Jobs</h2>
+              <div class="row ml-3 mt-3">
+                <div class="col-lg-3 mr-5" id="focus-first">
+                  <div class="card" style="width: 19rem;">
+                    <!-- <img src="assets/img/home kids.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Python</h5>
+                      <p class="card-text">Skills for python
+                      </p>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 mr-5" id="focus-second">
+                  <div class="card" style="width: 20rem;">
+                    <!-- <img src="assets/img/friendship day.JPG" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Data Scientist</h5>
+                      <p class="card-text">Skills for datascientist</p>
+                        <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 ml-5" id="focus-third">
+                  <div class="card" style="width: 20rem;">
+                    <!-- <img src="assets/img/health camp.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">HR Manager</h5>
+                      <p class="card-text">skills for hr manager</p>
+                        <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+			<div class="col-lg-3 ml-5" id="focus-third">
+                  <div class="card" style="width: 20rem;">
+                    <!-- <img src="assets/img/health camp.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">HR Manager</h5>
+                      <p class="card-text">skills for hr manager</p>
+                        <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+			
+              </div>
+            </div>
+          </section>
+  
+<div class="container">
+
+  
+</div>
+
+</body>
+</html>
