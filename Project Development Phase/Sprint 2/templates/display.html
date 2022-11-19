@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBPORTAL | HOME</title>
+       <div class="msg">{{ msg }}</div>
+    <meta charset="UTF-8">
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <!-- <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+td{
+    width: 10%;
+    text-align: center;
+    margin: 1%;
+    padding-top: 20px;
+}
+
+h1{
+    margin-left: -7%;
+}
+
+#Heading{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#Heading h3{
+    font-size: 100%;
+    width: 30%;
+    margin: 20px 0px;
+}
+
+</style>
+
+      </head>
+<body>
+        <!-- bootstrap navbar -->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Skill/Job Recommender Application</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+  
+  
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="{{url_for('dash')}}">DASHBOARD</a></li>
+                      <li><a href="/logout">Logout</a></li>
+  
+                  </ul>
+              </div>
+          </div>
+      </nav>
+          <!-- navbar ends -->
+
+        <!-- what we focus on -->
+        <section class="our-focus text-center">
+               <div id="nav">
+                <div id="Stock">
+                    <div id="left">
+                        <div id="formTitle">
+                            <h3 id="title" value="Stock">Your details</h3>
+                        </div>
+                        <table class="worddark">
+                            <thead>
+                                <div id="availability">
+                                    <div id="Heading">
+                                      <th>Username</th>
+                                      <th>Email</th>
+                                      <th>Qualification</th>
+                                      <th>Skills</th>
+                                      <th>Job Applied</th>
+                                    </div>
+                                </div> 
+                            </thead>
+                            <tbody>
+                                {% for account in acnt %}
+                                <tr>
+                                  <td>{{ account["USERNAME"] }}</td>
+
+                                  <td>{{ account["EMAIL"] }}</td>
+                                  <td>{{ account["QUALIFICATION"] }}</td>
+                              
+                                  <td>{{ account["SKILLS"] }}</td>
+                              
+                                  <td>{{ account["JOBS"] }}</td>
+                                </tr>
+                                <tr></tr>
+                            {% endfor %}
+                        </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+          </section>
+         
+</body>
+</html>
