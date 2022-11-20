@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skill/Job Recommender Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="{{url_for('static',filename='js/script.js')}}" ></script>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/dashStyle.css')}}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+.card{
+  margin-top:20px;
+}
+
+li{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>                      
+      </button>
+      <a class="navbar-brand" href="#">Skill/Job Recommender Application</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <form class="navbar-form navbar-left" action="#">
+      <div class="form-group">
+        <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="{{url_for('display')}}">My Jobs</a></li>
+        <li><a href="/logout">Logout</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="our-focus">
+            <div class="container">
+              <div class="col" id="myProducts">
+                <br>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;" >
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Python</strong>
+                        <br>
+                        <br>
+                      </a>
+                      <p class="card-text" style="color: white;">Skills for python
+                      </p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <br> 
+                  </div>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Data Scientist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Skills for python</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Data Scientist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Skills for python</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>HR Manager</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Decision making</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>IT technician</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Programming</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Support specialist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Technical support</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Quality assurance tester</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Problem solving skills</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>IT security specialist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Cyber security</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Computer programmer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">C/C++ programming</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Systems analyst</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Java Programming</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Network engineer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">cloud, networks</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>App developer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">kotlin, Java</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Database administrator</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">DBMS, MySQL</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Marketing specialist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Marketing skills</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Designer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Adobe editing apps</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Social media assistant</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Digital arts</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Content Writer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">English proficiency</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Graphic Designer</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Adobe illustrator</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>HR Manager</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">skills for hr manager</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Python</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Skills for python</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>Data Scientist</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">Skills for data Scientist</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+                <div class="card" style="width: 200px;background-color:black;padding: 20px;">
+                  <div class="card-header bg-dark d-sm-flex justify-content-sm-between align-items-sm-center">
+                    <div class=" card-title">
+                      <a href="#" style="color:white" class="display-inline-   block" onmouseover="this.style.color='#00e6ac'"
+                        onmouseout="this.style.color='#fff'">
+                        <strong>HR Manager</strong>
+                        <br><br>
+                      </a>
+                      <p class="card-text" style="color: white;">skills for hr manager</p>
+                      <br>
+                      <a href="/apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div><br>
+                </div>
+          </section> 
+              
+              <!-- Script -->
+<div class="container">
+
+  
+</div>
+</body>
+
+<script>
+ function myFunction() {
+    var input, filter, cards, cardContainer, title, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("myProducts");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".card-title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+
+</script>  
+
+</html>
