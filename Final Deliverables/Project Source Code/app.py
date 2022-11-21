@@ -107,8 +107,12 @@ def apply():
             ibm_db.execute(prep_stmt)
             msg = 'You have successfully applied for job !'
             return render_template('dashboard.html', msg = msg)
-
-        # session['loggedin'] = True
+            session['loggedin'] = True
+            ser = smtplib.SMTP('smtp.gmail.com',587);
+            ser.starttls();
+            ser.login('sthatchu246@gmail.com','uphtexijzypuywog')
+            ser.sendemail('sthatchu246@gmail.com','1915026@nec.edu.in','You Have one Job Request for English Proficiency!!');
+            print('mail sent');
         # TEXT = "Hello sandeep,a new appliaction for job position" +jobs+"is requested"
          
         #  #sendmail(TEXT,"sandeep@thesmartbridge.com")
